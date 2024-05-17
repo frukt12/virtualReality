@@ -1,0 +1,38 @@
+<head>
+  <title>nupack</title>
+</head>
+
+<body>
+  <div class="container">
+  {{> insert}}
+  </div>
+</body>
+
+<template name="insert">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Nupack RNA to IDT DNA converter</h1>
+      <p>This software takes the designed output RNA sequences from Nupack, and converts to DNA, adds a T7 polymerase promoter, takes the reverse complement, and formats it for IDTs batch import syntax.</p>
+      <img src="guide.png" id="guide-img">
+      <form>
+        <div class="form-group">
+          <label for="prefix">Name prefix</label>
+          <input class="form-control" type="text" id="prefix" placeholder="beacon_">
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input class="form-control" type="text" id="amount" placeholder="250nm">
+        </div>
+        <div class="form-group">
+          <label for="code">Nupack output</label>
+          <textarea class="form-control" id="code"></textarea>
+        </div>
+        <input class="btn" id="submit" type="submit">
+        <div class="form-group">
+          <label for="order">IDT code</label>
+          <textarea class="form-control" id="order"></textarea>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>
